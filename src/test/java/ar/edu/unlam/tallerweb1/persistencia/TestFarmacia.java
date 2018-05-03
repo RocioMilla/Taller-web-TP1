@@ -52,6 +52,25 @@ public class TestFarmacia extends SpringTest {
 			assertThat(Resultado).hasSize(1);
 
 		}
+	@Test
+	@Transactional @Rollback(true)
+	public void buscarFarmaciasPorBarrio() {
+		Punto geoLocalizacion1 = new Punto("1","1");
+		getSession().save(geoLocalizacion1);
+		Barrio barrio1 = new Barrio("Moron");
+		getSession().save(barrio1);
+		Direccion direccion1 = new Direccion("Calle falsa","123",barrio1);
+		getSession().save(direccion1);
+		Farmacia farmacia1 = new Farmacia("Farmacia1","11111","Martes",direccion1,geoLocalizacion1);
+		getSession().save(farmacia1);
+		
+		List<Farmacia> Resultado = getSession().createCriteria(Farmacia.class)
+			.createAlias("direccion", "direccionBuscada")
+			.createAlias("direccionBuscada.barrio", "barrioBuscado")
+			.add(Restrictions.eq("barrioBuscado.nombre", "Moron")).list();
+			assertThat(Resultado).hasSize(1);
+
+		}
 	
 	
 }
