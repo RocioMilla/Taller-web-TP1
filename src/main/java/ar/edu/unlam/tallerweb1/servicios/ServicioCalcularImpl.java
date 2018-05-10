@@ -19,10 +19,12 @@ private Double resultado;
 				resultado = numero1 * numero2;
 				break;
 			case "division":
-				if (numero2==0)
+				if (numero2==0) {
 					throw new ExcepcionDivision();
-				else
+				}
+				else {
 					resultado = numero1 / numero2;
+				}
 				break;
 			default: 
 				resultado=null;
