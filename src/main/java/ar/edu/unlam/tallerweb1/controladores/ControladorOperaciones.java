@@ -20,10 +20,14 @@ private ServicioCalcular servicioCalcular;
 	public ModelAndView hacerOperacion(@PathVariable Double numero1, @PathVariable String operador, @PathVariable Double numero2 ) {
 		ModelMap modelo = new ModelMap();
 		Double resultado = servicioCalcular.calcular(numero1,operador,numero2);
-		modelo.put("resultado", resultado);
 		if (resultado==null) {
+			modelo.put("operador", operador);
 			return new ModelAndView("error", modelo);
 		}else {
+		modelo.put("numero1", numero1);
+		modelo.put("operador", operador);
+		modelo.put("numero2", numero2);
+		modelo.put("resultado", resultado);
 		return new ModelAndView ("operacion", modelo);
 
 		}
