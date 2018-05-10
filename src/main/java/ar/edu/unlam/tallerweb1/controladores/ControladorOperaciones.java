@@ -17,9 +17,9 @@ public class ControladorOperaciones {
 private ServicioCalcular servicioCalcular;
 
 	@RequestMapping(path="calcular/{numero1}/{operador}/{numero2}")
-	public ModelAndView hacerOperacion(@PathVariable Integer numero1, @PathVariable String operador, @PathVariable Integer numero2 ) {
+	public ModelAndView hacerOperacion(@PathVariable Double numero1, @PathVariable String operador, @PathVariable Double numero2 ) {
 		ModelMap modelo = new ModelMap();
-		Integer resultado = servicioCalcular.calcular(numero1,operador,numero2);
+		Double resultado = servicioCalcular.calcular(numero1,operador,numero2);
 		if (resultado==null) {
 			modelo.put("operador", operador);
 			return new ModelAndView("error", modelo);

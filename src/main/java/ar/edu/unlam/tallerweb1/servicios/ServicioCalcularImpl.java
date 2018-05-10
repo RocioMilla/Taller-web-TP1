@@ -3,8 +3,8 @@ import org.springframework.stereotype.Service;
 
 @Service("servicioCalcular")
 public class ServicioCalcularImpl implements ServicioCalcular{
-private Integer resultado;
-	public Integer calcular(Integer numero1, String operador, Integer numero2) {
+private Double resultado;
+	public Double calcular(Double numero1, String operador, Double numero2) {
 		switch (operador) {
 			case "suma":
 				resultado = numero1 + numero2;
