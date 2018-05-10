@@ -7,6 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>El operador ${operador} es incorrecto. Asegúrese de usar "suma", "resta", "multiplicacion" o "division"</h1>
+<h1>ERROR</h1> 
+<p>Asegúrese de usar "suma", "resta", "multiplicacion" o "division".</p>
+<p>Recuerde que el divisor no puede ser 0 </p>
 </body>
 </html>
