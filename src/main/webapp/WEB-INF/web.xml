@@ -33,4 +33,10 @@
         <param-name>contextConfigLocation</param-name>
         <param-value>classpath:/applicationContext.xml</param-value>
     </context-param>
+    
+    <!--  Agrego una pagina de error 409 -->
+	<error-page>
+		<error-code>409</error-code>
+		<location>/WEB-INF/vistas/errorDivision.jsp</location>
+	</error-page>
 </web-app>

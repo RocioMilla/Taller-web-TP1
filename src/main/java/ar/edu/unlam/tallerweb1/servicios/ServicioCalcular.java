@@ -4,5 +4,5 @@ import org.springframework.stereotype.Service;
 
 @Service("servicioCalcular")
 public interface ServicioCalcular {
-	Double calcular(Double numero1, String operador, Double numero2);
+	Double calcular(Double numero1, String operador, Double numero2) throws Exception;
 }

@@ -17,7 +17,7 @@ public class ControladorOperaciones {
 private ServicioCalcular servicioCalcular;
 
 	@RequestMapping(path="calcular/{numero1}/{operador}/{numero2}")
-	public ModelAndView hacerOperacion(@PathVariable Double numero1, @PathVariable String operador, @PathVariable Double numero2 ) {
+	public ModelAndView hacerOperacion(@PathVariable Double numero1, @PathVariable String operador, @PathVariable Double numero2 ) throws Exception {
 		ModelMap modelo = new ModelMap();
 		Double resultado = servicioCalcular.calcular(numero1,operador,numero2);
 		if (resultado==null) {
