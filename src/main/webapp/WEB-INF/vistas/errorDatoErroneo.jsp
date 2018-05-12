@@ -7,7 +7,9 @@
 <title>Error 409</title>
 </head>
 <body>
-<h2>Error. El divisor no puede ser 0 </h2>
+<h2>Error de datos.</h2>
+<p> Recuerde que el divisor no puede ser 0 </p>
+<p>Asegúrese de usar "suma", "resta", "multiplicacion" o "division".</p>
 
 </body>
 </html>

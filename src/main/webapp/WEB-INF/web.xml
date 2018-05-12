@@ -37,6 +37,6 @@
     <!--  Agrego una pagina de error 409 -->
 	<error-page>
 		<error-code>409</error-code>
-		<location>/WEB-INF/vistas/errorDivision.jsp</location>
+		<location>/WEB-INF/vistas/errorDatoErroneo.jsp</location>
 	</error-page>
 </web-app>
