@@ -10,8 +10,8 @@ public class ExcepcionDatoErroneo extends Exception {
 	 */
 	private static final long serialVersionUID = -3715489224430614428L;
 
-	public ExcepcionDatoErroneo() {
-		super();
+	public ExcepcionDatoErroneo(String mensaje) {
+		super(mensaje);
 	}
 	
 }
